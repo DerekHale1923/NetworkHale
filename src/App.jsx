@@ -1,13 +1,11 @@
 import React, {lazy, Suspense} from 'react';
 import './App.css'
 import NavBar from "./Components/NavBar/NavBar";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 import UsersContainer from "./Components/Users/UsersContainer";
-// import SuperProfileContainer from "./Components/Profile/ProfileContainer";
-// import SuperDialogsContainer from "./Components/Dialogs/PanelSendMess/SuperDialogsContainer";
 import Login from "./Components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {initializeApp} from "./Redux/AppReducer";
@@ -18,6 +16,8 @@ import {getAuthLogin} from "./Redux/Header.Selector";
 import {LogoutThunk} from "./Redux/auth-reducer";
 import Header from "./Components/Header/Header";
 import Store from "./Redux/Redux-store";
+// import SuperProfileContainer from "./Components/Profile/ProfileContainer";
+// import SuperDialogsContainer from "./Components/Dialogs/PanelSendMess/SuperDialogsContainer";
 
 
 const SuperProfileContainer = lazy(() => import('./Components/Profile/ProfileContainer'))
@@ -63,12 +63,13 @@ const AppContainer = connect(mapStateToProps, {initializeApp, LogoutThunk})(App)
 
 const MainApp = () => {
     return (
-        <BrowserRouter>
+        <HashRouter basename={process.env.PUBLIC_URL}>
             <Provider store={Store}>
                 <AppContainer state={Store.getState()}/>
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
+// для гита, HashRouter иначе url будут тупить при обновлении, на обычный сервак BrowserRouter
 
 export default MainApp
