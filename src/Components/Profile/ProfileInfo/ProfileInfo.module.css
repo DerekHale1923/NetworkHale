@@ -1,0 +1,29 @@
+.contentUserBg {
+    margin: 5px;
+    overflow: hidden;
+    width: 910px;
+    height: 290px;
+}
+
+.contentUserBg img {
+    width: 950px;
+    height: 412px;
+}
+
+.contentUserDesc {
+    display: flex;
+    height: 200px;
+    width: 350px;
+    margin: 5px;
+}
+
+.contentUserDesc img {
+    height: 90px;
+    width: 90px;
+}
+
+.userDesc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}

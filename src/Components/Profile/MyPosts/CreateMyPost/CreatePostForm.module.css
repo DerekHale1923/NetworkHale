@@ -1,0 +1,25 @@
+.sendPost {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.sendPost button {
+    margin-top: 5px;
+    width: 60px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+}
+
+.sendPost textarea {
+    height: 80px;
+    resize: none;
+    width: 798px;
+    border-radius: 6px;
+    text-align: left;
+    margin-top: 20px;
+    padding: 4px;
+    box-sizing: border-box;
+    outline: none;
+}

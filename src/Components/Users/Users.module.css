@@ -1,0 +1,29 @@
+.wrapper {
+
+}
+
+.wrapperUser {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: grey;
+    height: 100px;
+    margin-bottom: 40px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.leftPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centerPart {
+
+}
+
+.rightPart {
+
+}

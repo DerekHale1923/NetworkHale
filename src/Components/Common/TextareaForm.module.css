@@ -1,0 +1,12 @@
+.formControl{
+
+}
+.error {
+    border: 2px solid red;
+}
+
+ .spanError {
+    position: absolute;
+    color: red;
+}
+

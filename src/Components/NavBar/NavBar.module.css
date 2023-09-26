@@ -1,0 +1,46 @@
+.wrap {
+    grid-area: sidebar;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+    max-height: 600px;
+    max-width: 230px;
+}
+.sideBar {
+    user-select: none;
+    padding: 25px;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBar a {
+    margin-top: 20px;
+    border: 1px solid lightgrey;
+    padding: 6px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.sideBar a:hover {
+    background-color: azure;
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+}
+
+.sideBar a:focus {
+    color: #551A8B;
+}
+
+.sideBar .activeNav {
+    background-color: #BAE498;
+}
+
+.sideBar .activeNav:hover {
+    background-color: #BAE498;
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+}
+

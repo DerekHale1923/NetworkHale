@@ -1,0 +1,31 @@
+.dialog {
+    box-sizing: border-box;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    height: 100px;
+    width: 144px;
+    margin-bottom: 10px;
+}
+.dialog a {
+    display: flex;
+    flex-direction: column;
+    width: 64px;
+    text-decoration: none;
+    color: -webkit-link;
+}
+
+.dialog:first-child {
+    border-top: none;
+    border-radius: 0 0 0 16px;
+}
+
+.dialog img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+
+
+.active {
+    margin-left: 60px;
+}

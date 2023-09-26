@@ -1,0 +1,11 @@
+.error {
+    border: 2px solid red;
+    border-radius: 6px;
+
+}
+
+.spanError {
+    position: absolute;
+    color: red;
+    padding: 5px;
+}

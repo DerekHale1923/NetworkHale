@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        'header header '
+        'sidebar content';
+    grid-template-columns: 280px 920px;
+    grid-template-rows: 70px auto;
+}
+
+.contentWrapper {
+    grid-area: content;
+    background-color: aqua;
+    min-height: 600px;
+}
+
