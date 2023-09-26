@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NetworkHale/static/css/main.df31eca2.css",
-    "main.js": "/NetworkHale/static/js/main.3537f27b.js",
+    "main.js": "/NetworkHale/static/js/main.65efb2be.js",
     "static/css/511.7a9d99fa.chunk.css": "/NetworkHale/static/css/511.7a9d99fa.chunk.css",
     "static/js/511.af071ec9.chunk.js": "/NetworkHale/static/js/511.af071ec9.chunk.js",
     "static/css/369.54d7c291.chunk.css": "/NetworkHale/static/css/369.54d7c291.chunk.css",
@@ -13,7 +13,7 @@
     "static/media/i.jpg": "/NetworkHale/static/media/i.e63565651a1ef9fca7bd.jpg",
     "index.html": "/NetworkHale/index.html",
     "main.df31eca2.css.map": "/NetworkHale/static/css/main.df31eca2.css.map",
-    "main.3537f27b.js.map": "/NetworkHale/static/js/main.3537f27b.js.map",
+    "main.65efb2be.js.map": "/NetworkHale/static/js/main.65efb2be.js.map",
     "511.7a9d99fa.chunk.css.map": "/NetworkHale/static/css/511.7a9d99fa.chunk.css.map",
     "511.af071ec9.chunk.js.map": "/NetworkHale/static/js/511.af071ec9.chunk.js.map",
     "369.54d7c291.chunk.css.map": "/NetworkHale/static/css/369.54d7c291.chunk.css.map",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.df31eca2.css",
-    "static/js/main.3537f27b.js"
+    "static/js/main.65efb2be.js"
   ]
 }
