@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/NetworkHale/static/css/main.df31eca2.css",
-    "main.js": "/NetworkHale/static/js/main.7350f2a2.js",
-    "static/css/511.7a9d99fa.chunk.css": "/NetworkHale/static/css/511.7a9d99fa.chunk.css",
-    "static/js/511.af071ec9.chunk.js": "/NetworkHale/static/js/511.af071ec9.chunk.js",
-    "static/css/369.54d7c291.chunk.css": "/NetworkHale/static/css/369.54d7c291.chunk.css",
-    "static/js/369.94d43da2.chunk.js": "/NetworkHale/static/js/369.94d43da2.chunk.js",
-    "static/media/png": "/NetworkHale/static/media/1676295806122712757.1dbdd4c7c63603e66a09.png",
-    "static/media/1627015268_12-p-rozovii-fon-dlya-logotipa-12.png": "/NetworkHale/static/media/1627015268_12-p-rozovii-fon-dlya-logotipa-12.6d170004a83ef5271c8f.png",
-    "static/media/backgroundMainUser.jpg": "/NetworkHale/static/media/backgroundMainUser.14ec57923400902b07cd.jpg",
-    "static/media/medved-flag-rossii.jpg": "/NetworkHale/static/media/medved-flag-rossii.9d09de2693ace8923bc0.jpg",
-    "static/media/i.jpg": "/NetworkHale/static/media/i.e63565651a1ef9fca7bd.jpg",
-    "index.html": "/NetworkHale/index.html",
-    "main.df31eca2.css.map": "/NetworkHale/static/css/main.df31eca2.css.map",
-    "main.7350f2a2.js.map": "/NetworkHale/static/js/main.7350f2a2.js.map",
-    "511.7a9d99fa.chunk.css.map": "/NetworkHale/static/css/511.7a9d99fa.chunk.css.map",
-    "511.af071ec9.chunk.js.map": "/NetworkHale/static/js/511.af071ec9.chunk.js.map",
-    "369.54d7c291.chunk.css.map": "/NetworkHale/static/css/369.54d7c291.chunk.css.map",
-    "369.94d43da2.chunk.js.map": "/NetworkHale/static/js/369.94d43da2.chunk.js.map"
+    "main.css": "/static/css/main.df31eca2.css",
+    "main.js": "/static/js/main.822564c4.js",
+    "static/css/511.7a9d99fa.chunk.css": "/static/css/511.7a9d99fa.chunk.css",
+    "static/js/511.af071ec9.chunk.js": "/static/js/511.af071ec9.chunk.js",
+    "static/css/369.54d7c291.chunk.css": "/static/css/369.54d7c291.chunk.css",
+    "static/js/369.94d43da2.chunk.js": "/static/js/369.94d43da2.chunk.js",
+    "static/media/png": "/static/media/1676295806122712757.1dbdd4c7c63603e66a09.png",
+    "static/media/1627015268_12-p-rozovii-fon-dlya-logotipa-12.png": "/static/media/1627015268_12-p-rozovii-fon-dlya-logotipa-12.6d170004a83ef5271c8f.png",
+    "static/media/backgroundMainUser.jpg": "/static/media/backgroundMainUser.14ec57923400902b07cd.jpg",
+    "static/media/medved-flag-rossii.jpg": "/static/media/medved-flag-rossii.9d09de2693ace8923bc0.jpg",
+    "static/media/i.jpg": "/static/media/i.e63565651a1ef9fca7bd.jpg",
+    "index.html": "/index.html",
+    "main.df31eca2.css.map": "/static/css/main.df31eca2.css.map",
+    "main.822564c4.js.map": "/static/js/main.822564c4.js.map",
+    "511.7a9d99fa.chunk.css.map": "/static/css/511.7a9d99fa.chunk.css.map",
+    "511.af071ec9.chunk.js.map": "/static/js/511.af071ec9.chunk.js.map",
+    "369.54d7c291.chunk.css.map": "/static/css/369.54d7c291.chunk.css.map",
+    "369.94d43da2.chunk.js.map": "/static/js/369.94d43da2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df31eca2.css",
-    "static/js/main.7350f2a2.js"
+    "static/js/main.822564c4.js"
   ]
 }
