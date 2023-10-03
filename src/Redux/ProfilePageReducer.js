@@ -2,11 +2,13 @@ import igor from "../img/1676295806122712757.png";
 import masha from "../img/i.jpg";
 import tima from "../img/medved-flag-rossii.jpg";
 import {profileAPI, userAPI} from "../API/api";
+import defaultPhoto from '../img/images.png'
 
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
 const SET_STATUS = 'SET_STATUS'
 const DELETE_POST = 'DELETE_POST'
+const ADD_PHOTO = 'ADD_PHOTO'
 
 
 let initialState = {
@@ -16,6 +18,7 @@ let initialState = {
         {id: 3,message: '3', name: 'Tima', date: Date(), likesCount: '26', img: tima}],
     profile: null,
     status: 'Пусто',
+    photo: defaultPhoto,
 }
 
 const ProfilePageReducer = (state = initialState, action) => {
@@ -39,6 +42,12 @@ const ProfilePageReducer = (state = initialState, action) => {
                 profile: action.profile
             }
         }
+        case ADD_PHOTO: {
+            return {
+                ...state,
+                photo: action.photo
+            }
+        }
         case DELETE_POST: {
             return {
                 ...state,
@@ -59,6 +68,7 @@ export const actionAddPost = (newPostText) => ({type: ADD_POST, newPostText})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
 export const deletePost = (postId) => ({type: DELETE_POST, postId})
+export const savePhoto = (photo) => ({type:ADD_PHOTO, photo})
 
 export const profilePageThunk = (userid) => async (dispatch) => {
    let res = await userAPI.getUsersProfile(userid)
@@ -74,6 +84,7 @@ export const updateStatus = (status) => async (dispatch) => {
    let res = await profileAPI.updateStatus(status)
             if (res.data.resoultCode === 0) dispatch(setStatus(res))
 }
+
 
 
 export default ProfilePageReducer

@@ -1,7 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 import './App.css'
 import NavBar from "./Components/NavBar/NavBar";
-import {HashRouter, Route, Routes} from "react-router-dom";
+import { HashRouter, Route, Routes} from "react-router-dom";
 import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
@@ -25,6 +25,7 @@ const SuperDialogsContainer = lazy(() => import('./Components/Dialogs/PanelSendM
 
 // lazy loading это процесс импорта компонентов только когда они потребуются, минуя общий пакет загрузок
 export function App(props) {
+
     props.initializeApp()
     return (
         !props.initialized ? <Preloader/>
@@ -63,13 +64,12 @@ const AppContainer = connect(mapStateToProps, {initializeApp, LogoutThunk})(App)
 
 const MainApp = () => {
     return (
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <Provider store={Store}>
                 <AppContainer state={Store.getState()}/>
             </Provider>
         </HashRouter>
     )
 }
-// для гита, HashRouter иначе url будут тупить при обновлении, на обычный сервак BrowserRouter
-
+// чтобы задеплоить на gh нужно указать в package.json домашнюю страницу(обязательно шарп в конце адреса) и обернуть в хэшроутер
 export default MainApp

@@ -1,13 +1,13 @@
 import React from 'react';
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import SuperMyPostContainer from "./MyPosts/CreateMyPost/SuperMyPostContainer";
-import {updateStatus} from "../../Redux/ProfilePageReducer";
 
-const Profile = ({profile,status,updateStatus}) => {
+
+const Profile = ({profile,status,updateStatus,userId,savePhoto,photo}) => {
 
     return (
         <>
-            <ProfileInfo profile={profile} status={status} updateStatus={updateStatus}/>
+            <ProfileInfo photo={photo} savePhoto={savePhoto} userId={userId} profile={profile} status={status} updateStatus={updateStatus}/>
             <SuperMyPostContainer/>
         </>
     );

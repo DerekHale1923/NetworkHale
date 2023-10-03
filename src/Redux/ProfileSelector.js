@@ -10,3 +10,7 @@ export const getAuthUserId = (store) => {
 export const getIsAuth = (store) => {
     return store.auth.isAuth
 }
+
+export const getPhoto = (store) => {
+    return store.profilePage.photo
+}

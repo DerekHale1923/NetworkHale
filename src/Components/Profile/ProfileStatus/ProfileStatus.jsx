@@ -10,10 +10,10 @@ const ProfileStatus = ({statusOuter,updateStatus}) => {
         setStatus(statusOuter)
     }, [statusOuter]);
     let activateEditMode = () => {
-        setEditMode(editMode = true)
+        setEditMode(editMode = false)
     }
     let deactivateEditMode = () => {
-        setEditMode(editMode = false)
+        setEditMode(editMode = true)
         updateStatus(status)
     }
     let onStatusChange = (e) => {
@@ -22,9 +22,8 @@ const ProfileStatus = ({statusOuter,updateStatus}) => {
 
 
     return (
-        <>  {!editMode
-            ?
-            <div className={style.div} onClick={() => activateEditMode()}>{status.length === 0 ? 'Пусто' : status}</div>
+        <>  {editMode
+            ? <div className={style.div} onClick={() => activateEditMode()}>{status.length === 0 ? 'Пусто' : status}</div>
             : <input autoFocus={true} onBlur={() => deactivateEditMode()}
                      onChange={(e) => onStatusChange(e)} value={status}/>}
             {/*без автофокуса не сработает onBlur(выход из фокуса) так как ему нужен фокус)*/}
