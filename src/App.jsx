@@ -16,11 +16,11 @@ import {getAuthLogin} from "./Redux/Header.Selector";
 import {LogoutThunk} from "./Redux/auth-reducer";
 import Header from "./Components/Header/Header";
 import Store from "./Redux/Redux-store";
-// import SuperProfileContainer from "./Components/Profile/ProfileContainer";
+ import SuperProfileContainer from "./Components/Profile/ProfileContainer";
 // import SuperDialogsContainer from "./Components/Dialogs/PanelSendMess/SuperDialogsContainer";
 
 
-const SuperProfileContainer = lazy(() => import('./Components/Profile/ProfileContainer'))
+//const SuperProfileContainer = lazy(() => import('./Components/Profile/ProfileContainer'))
 const SuperDialogsContainer = lazy(() => import('./Components/Dialogs/PanelSendMess/SuperDialogsContainer'))
 
 // lazy loading это процесс импорта компонентов только когда они потребуются, минуя общий пакет загрузок

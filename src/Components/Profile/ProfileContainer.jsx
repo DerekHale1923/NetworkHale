@@ -1,11 +1,22 @@
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {getStatusThunk, profilePageThunk, savePhoto, updateStatus} from "../../Redux/ProfilePageReducer";
+import {
+    getStatusThunk,
+    profilePageThunk,
+    updatePhotoProfile,
+    updateStatus
+} from "../../Redux/ProfilePageReducer";
 import {useParams} from "react-router-dom";
 import React, {useEffect} from "react";
 import {withAuthRedirect} from "../../HOC/AuthRedirect";
 import {compose} from "redux";
-import {getAuthUserId, getIsAuth, getPhoto, getProfile, getStatusProfile} from "../../Redux/ProfileSelector";
+import {
+    getAuthUserId,
+    getIsAuth,
+    getPhoto,
+    getProfile,
+    getStatusProfile
+} from "../../Redux/ProfileSelector";
 
 export const ProfileContainer = (props) => {
 
@@ -21,6 +32,7 @@ export const ProfileContainer = (props) => {
                 props.profilePageThunk(props.authUserId)
                 props.getStatusThunk(props.authUserId)
             }
+
         }
         return function () {
             clearHook = true
@@ -29,7 +41,12 @@ export const ProfileContainer = (props) => {
 
     return (
         <>
-            <Profile photo={props.photo} savePhoto={props.savePhoto} userId={userId} profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>
+            <Profile updatePhotoProfile={props.updatePhotoProfile}
+                     photo={props.photo}
+                     userId={userId}
+                     profile={props.profile}
+                     status={props.status}
+                     updateStatus={props.updateStatus}/>
         </>
     )
 }
@@ -42,14 +59,13 @@ let mapStateToProps = (store) => ({
     status: getStatusProfile(store),
     authUserId: getAuthUserId(store),
     isAuth: getIsAuth(store),
-    photo: getPhoto(store)
-
+    photo: getPhoto(store),
 }) // на каждое изменение state запускается функция mapStateToProps и проверяет не изменилось ли что то
 // у нас полно изменений в store поэтому очень важно, точечно выбирать данные которые будут закинуты в mapStateToProps
 // в react очень дорогая перерисовка!
 
 export default compose(
-    connect(mapStateToProps, {profilePageThunk, getStatusThunk, updateStatus,savePhoto}),
+    connect(mapStateToProps, {profilePageThunk, getStatusThunk, updateStatus,updatePhotoProfile}),
     withAuthRedirect
 )(ProfileContainer)
 //мы оборачиваем ProfileContainer => withAuthRedirect затем результат оборачиваем => connect

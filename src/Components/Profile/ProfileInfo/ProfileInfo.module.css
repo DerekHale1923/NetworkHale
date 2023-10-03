@@ -31,10 +31,7 @@
 }
 .photo label:hover{
     opacity: 0.9;
-    border: none;
-    width: 112px;
-    padding: 1px 5px;
-    height: 22px;
+    border: 1px solid lightgrey;
 }
 .photo img {
     height: 90px;

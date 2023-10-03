@@ -39,7 +39,7 @@ const ProfilePageReducer = (state = initialState, action) => {
         case SET_USER_PROFILE: {
             return {
                 ...state,
-                profile: action.profile
+                profile: action.profile,
             }
         }
         case ADD_PHOTO: {
@@ -75,6 +75,11 @@ export const profilePageThunk = (userid) => async (dispatch) => {
        dispatch(setUserProfile(res))
 }
 
+export const updatePhotoProfile = (photo) => async (dispatch) => {
+    let res = await profileAPI.updatePhoto(photo)
+    if (res.data.resultCode === 0) return  dispatch(savePhoto(res.data.data.photos.small))
+}
+
 export const getStatusThunk = (userId) => async (dispatch) => {
     let res = await profileAPI.getStatus(userId)
         if (res.data === null) return dispatch(setStatus('Нет статуса'))
@@ -82,7 +87,7 @@ export const getStatusThunk = (userId) => async (dispatch) => {
 }
 export const updateStatus = (status) => async (dispatch) => {
    let res = await profileAPI.updateStatus(status)
-            if (res.data.resoultCode === 0) dispatch(setStatus(res))
+            if (res.data.resultCode === 0) return dispatch(setStatus(status))
 }
 
 
