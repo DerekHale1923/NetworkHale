@@ -1,27 +1,26 @@
 .contentUserBg {
     margin: 5px;
     overflow: hidden;
-    width: 910px;
-    height: 290px;
 }
-
 .contentUserBg img {
-    width: 950px;
-    height: 412px;
+    width: 910px;
+    height: 390px;
 }
 
 .contentUserDesc {
     display: flex;
-    height: 140px;
+    height: 260px;
     width: 450px;
     margin: 5px;
 }
-.photo{
+
+.photo {
     display: flex;
     flex-direction: column;
     width: 150px;
 }
-.photo label{
+
+.photo label {
     border: 1px solid grey;
     padding: 0 4px;
     border-radius: 3px;
@@ -29,10 +28,12 @@
     height: 20px;
     background-color: lightgrey;
 }
-.photo label:hover{
+
+.photo label:hover {
     opacity: 0.9;
     border: 1px solid lightgrey;
 }
+
 .photo img {
     height: 90px;
     width: 90px;
@@ -49,5 +50,12 @@
     display: flex;
     flex-direction: column;
     margin-left: 15px;
-    width: 200px;
+
 }
+
+/*.contacts{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    height: 200px;*/
+/*    color: green;*/
+/*}*/

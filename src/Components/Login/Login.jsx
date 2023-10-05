@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './Login.module.css'
 import styleError from './../Common/InputForm.module.css'
-import {Field, reduxForm} from "redux-form";
+import {reduxForm} from "redux-form";
 import InputForm from "../Common/InputForm";
 import {maxLengthCreator, required} from "../../Utils/Validators";
 import {LoginThunk} from "../../Redux/auth-reducer";
 import {connect} from "react-redux";
 import {Navigate} from "react-router-dom";
-import {shortCutField} from "../Common/shortCutField";
+import {ShortCutField} from "../Common/ShortCutField";
 
 
 const maxLength15 = maxLengthCreator(20)
@@ -18,9 +18,9 @@ const maxLength15 = maxLengthCreator(20)
                     {/* handleSubmit приходит из пропсов! туда поступает превент дефолт,
                     получение всех полей и упаковка в обьект, затем вызов онсабмит и
                     передача туда упакованного обьекта */}
-                    {shortCutField('email','Введите емаил',[required, maxLength15],InputForm)}
-                    {shortCutField('password','Введите пароль',[required, maxLength15],InputForm,'password')}
-                    {shortCutField('rememberMe',null,[],'input',"checkbox",null,'Запомнить меня')}
+                    {ShortCutField('email','Введите емаил',[required, maxLength15],InputForm)}
+                    {ShortCutField('password','Введите пароль',[required, maxLength15],InputForm,'password')}
+                    {ShortCutField('rememberMe',null,[],'input',"checkbox",null,'Запомнить меня')}
                     {/*
                     Стандартные филды
                     <div><Field name={'email'} placeholder={'Введите емаил'} validate={[required, maxLength15]} component={InputForm}/></div>

@@ -4,6 +4,7 @@ import tima from "../img/medved-flag-rossii.jpg";
 import {profileAPI, userAPI} from "../API/api";
 import defaultPhoto from '../img/images.png'
 
+
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
 const SET_STATUS = 'SET_STATUS'
@@ -45,7 +46,13 @@ const ProfilePageReducer = (state = initialState, action) => {
         case ADD_PHOTO: {
             return {
                 ...state,
-                photo: action.photo
+                profile: {
+                    ...state.profile,
+                    photos:{
+                        ...state.profile.photos,
+                        small: action.photo
+                    }
+                }
             }
         }
         case DELETE_POST: {
