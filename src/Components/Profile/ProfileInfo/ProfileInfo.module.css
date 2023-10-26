@@ -45,17 +45,3 @@
     width: 115px;
 }
 
-
-.userDesc {
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
-
-}
-
-/*.contacts{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    height: 200px;*/
-/*    color: green;*/
-/*}*/

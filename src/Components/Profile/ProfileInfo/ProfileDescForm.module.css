@@ -1,0 +1,10 @@
+.userDesc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+
+}
+.contacts {
+    margin-left: 15px;
+    padding-top: 2px;
+}

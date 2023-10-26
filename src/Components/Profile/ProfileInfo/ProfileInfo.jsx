@@ -3,14 +3,18 @@ import style from './ProfileInfo.module.css'
 import userBg from "../../../img/backgroundMainUser.jpg";
 import Preloader from "../../Common/Preloader";
 import ProfileStatus from './../ProfileStatus/ProfileStatus'
-import {ProfileContacts} from "./ProfileContacts";
+import ProfileDescForm from "./ProfileDescForm";
+import ProfileDescription from "./ProfileDescription";
+
 
 const ProfileInfo = ({profile,status,updateStatus,userId,photo,updatePhotoProfile}) => {
- const [editMode, setEditMode] = useState(false)
+    const [editMode, setEditMode] = useState(true)
     const onMainPhotoSelected = (e) => {
         if(e.target.files.length !== 0) updatePhotoProfile(e.target.files[0])
     }
-
+    const onSubmit = (data) => {
+        console.log(data)
+    }
     return (
         <>
             {profile ?
@@ -28,21 +32,14 @@ const ProfileInfo = ({profile,status,updateStatus,userId,photo,updatePhotoProfil
                                     <input type="file" id={'changeAvatar'} onChange={onMainPhotoSelected}/>
                                 </>}
                             </div>
-                        <div className={style.userDesc}>
-                            <div>Full Name:{profile.fullName}</div>
-                            <div>About me:{profile.aboutMe}</div>
-                            <div>Looking for a job: {profile.lookingForAJobDescription}</div>
+                        { editMode
+                            ? <ProfileDescription profile={profile}/>
+                            : <ProfileDescForm profile={profile} onSubmit={onSubmit}/>
+                        }
+                        { editMode
+                            ? <button onClick={() => setEditMode(false)}>Edit</button>
+                            : <button onClick={() => setEditMode(true)}>Save</button> }
 
-                            <div className={style.contacts}>Contacts: {Object.keys(profile.contacts)
-                                .map(c =>
-                                    <ProfileContacts key={c} nameContacts={c} contactsValue={profile.contacts[c]}/>)}
-                            </div>
-                            {
-                                !editMode ? <button onClick={() => setEditMode(true)}>Edit</button>
-                                    : <button onClick={() => setEditMode(false)}>Save</button>
-                            }
-
-                        </div>
                     </div>
                     <ProfileStatus statusOuter={status} updateStatus={updateStatus} userId={userId}/>
                 </>
